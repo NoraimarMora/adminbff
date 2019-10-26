@@ -29,14 +29,14 @@ router.post('/categories', (req, res) => {
 })
 
 // Actualizar una categoria
-router.put('/categories', (req, res) => {
+router.put('/categories/:id', (req, res) => {
   api.put('/categorias/' + req.params.id, req.body).then(resp => {
     res.send(resp.data)
   })
 })
 
 // Eliminar una categoria
-router.put('/categories', (req, res) => {
+router.put('/categories/:id', (req, res) => {
   api.put('/categorias/' + req.params.id, req.body).then(resp => {
     res.send(resp.data)
   })
@@ -65,14 +65,14 @@ router.post('/products', (req, res) => {
 })
 
 // Actualizar un producto
-router.put('/products', (req, res) => {
+router.put('/products/:id', (req, res) => {
   api.put('/productos/' + req.params.id, req.body).then(resp => {
     res.send(resp.data)
   })
 })
 
 // Eliminar un producto
-router.put('/products', (req, res) => {
+router.put('/products/:id', (req, res) => {
   api.put('/productos/' + req.params.id, req.body).then(resp => {
     res.send(resp.data)
   })

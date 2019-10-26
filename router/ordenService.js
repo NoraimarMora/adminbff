@@ -22,7 +22,7 @@ router.get('/orders/:id', (req, res) => {
 })
 
 // Actualizar una orden
-router.put('/orders', (req, res) => {
+router.put('/orders/:id', (req, res) => {
   api.put('/ordenes/update/' + req.params.id, req.body).then(resp => {
     res.send(resp.data)
   })
@@ -51,14 +51,14 @@ router.post('/statuses', (req, res) => {
 })
 
 // Actualizar un estado
-router.put('/statuses', (req, res) => {
+router.put('/statuses/:id', (req, res) => {
   api.put('/estados/update/' + req.params.id, req.body).then(resp => {
     res.send(resp.data)
   })
 })
 
 // Eliminar un estado
-router.put('/statuses', (req, res) => {
+router.put('/statuses/:id', (req, res) => {
   api.put('/estados/delete/' + req.params.id, req.body).then(resp => {
     res.send(resp.data)
   })

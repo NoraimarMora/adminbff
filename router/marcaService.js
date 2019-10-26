@@ -29,14 +29,14 @@ router.post('/brands', (req, res) => {
 })
 
 // Actualizar una marca
-router.put('/brands', (req, res) => {
+router.put('/brands/:id', (req, res) => {
   api.put('/marcas/' + req.params.id, req.body).then(resp => {
     res.send(resp.data)
   })
 })
 
 // Eliminar una marca
-router.put('/brands', (req, res) => {
+router.put('/brands/:id', (req, res) => {
   api.put('/marcas/' + req.params.id, req.body).then(resp => {
     res.send(resp.data)
   })
@@ -65,14 +65,14 @@ router.post('/stores', (req, res) => {
 })
 
 // Actualizar una tienda
-router.put('/stores', (req, res) => {
+router.put('/stores/:id', (req, res) => {
   api.put('/tiendas/' + req.params.id, req.body).then(resp => {
     res.send(resp.data)
   })
 })
 
 // Eliminar una tienda
-router.put('/stores', (req, res) => {
+router.put('/stores/:id', (req, res) => {
   api.put('/tiendas/' + req.params.id, req.body).then(resp => {
     res.send(resp.data)
   })
