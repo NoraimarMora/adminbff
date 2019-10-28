@@ -36,8 +36,8 @@ router.put('/categories/:id', (req, res) => {
 })
 
 // Eliminar una categoria
-router.put('/categories/:id', (req, res) => {
-  api.put('/categorias/' + req.params.id, req.body).then(resp => {
+router.delete('/categories/:id', (req, res) => {
+  api.delete('/categorias/' + req.params.id, req.body).then(resp => {
     res.send(resp.data)
   })
 })
@@ -72,8 +72,8 @@ router.put('/products/:id', (req, res) => {
 })
 
 // Eliminar un producto
-router.put('/products/:id', (req, res) => {
-  api.put('/productos/' + req.params.id, req.body).then(resp => {
+router.delete('/products/:id', (req, res) => {
+  api.delete('/productos/' + req.params.id, req.body).then(resp => {
     res.send(resp.data)
   })
 })

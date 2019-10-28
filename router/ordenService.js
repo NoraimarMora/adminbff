@@ -58,8 +58,8 @@ router.put('/statuses/:id', (req, res) => {
 })
 
 // Eliminar un estado
-router.put('/statuses/:id', (req, res) => {
-  api.put('/estados/delete/' + req.params.id, req.body).then(resp => {
+router.delete('/statuses/:id', (req, res) => {
+  api.delete('/estados/delete/' + req.params.id, req.body).then(resp => {
     res.send(resp.data)
   })
 })
