@@ -23,7 +23,7 @@ router.get('/brands/:id', (req, res) => {
 
 // Crear una marca
 router.post('/brands', (req, res) => {
-  api.post('/marcas').then(resp => {
+  api.post('/marcas', req.body).then(resp => {
     res.send(resp.data)
   })
 })
@@ -59,7 +59,7 @@ router.get('/stores/:id', (req, res) => {
 
 // Crear una tienda
 router.post('/stores', (req, res) => {
-  api.post('/tiendas').then(resp => {
+  api.post('/tiendas', req.body).then(resp => {
     res.send(resp.data)
   })
 })

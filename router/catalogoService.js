@@ -23,7 +23,7 @@ router.get('/categories/:id', (req, res) => {
 
 // Crear una categoria
 router.post('/categories', (req, res) => {
-  api.post('/categorias').then(resp => {
+  api.post('/categorias', req.body).then(resp => {
     res.send(resp.data)
   })
 })
@@ -59,7 +59,7 @@ router.get('/products/:id', (req, res) => {
 
 // Crear un producto
 router.post('/products', (req, res) => {
-  api.post('/productos').then(resp => {
+  api.post('/productos', req.body).then(resp => {
     res.send(resp.data)
   })
 })

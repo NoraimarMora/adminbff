@@ -45,7 +45,7 @@ router.get('/statuses/:id', (req, res) => {
 
 // Crear un estado
 router.post('/statuses', (req, res) => {
-  api.post('/estados').then(resp => {
+  api.post('/estados', req.body).then(resp => {
     res.send(resp.data)
   })
 })
