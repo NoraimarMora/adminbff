@@ -26,7 +26,7 @@ router.post('/orders', (req, res) => {
   api.post('/ordenes', req.body).then(resp => {
     res.send(resp.data)
   })
-})
+}) 
 
 // Actualizar una orden
 router.put('/orders/:id', (req, res) => {
