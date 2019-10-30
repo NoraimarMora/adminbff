@@ -23,7 +23,7 @@ router.get('/brands/:id', (req, res) => {
 
 // Crear una marca
 router.post('/brands', (req, res) => {
-  api.post('/marcas').then(resp => {
+  api.post('/marcas', req.body).then(resp => {
     res.send(resp.data)
   })
 })
@@ -36,8 +36,8 @@ router.put('/brands/:id', (req, res) => {
 })
 
 // Eliminar una marca
-router.put('/brands/:id', (req, res) => {
-  api.put('/marcas/' + req.params.id, req.body).then(resp => {
+router.delete('/brands/:id', (req, res) => {
+  api.delete('/marcas/' + req.params.id, req.body).then(resp => {
     res.send(resp.data)
   })
 })
@@ -59,7 +59,7 @@ router.get('/stores/:id', (req, res) => {
 
 // Crear una tienda
 router.post('/stores', (req, res) => {
-  api.post('/tiendas').then(resp => {
+  api.post('/tiendas', req.body).then(resp => {
     res.send(resp.data)
   })
 })
@@ -72,8 +72,8 @@ router.put('/stores/:id', (req, res) => {
 })
 
 // Eliminar una tienda
-router.put('/stores/:id', (req, res) => {
-  api.put('/tiendas/' + req.params.id, req.body).then(resp => {
+router.delete('/stores/:id', (req, res) => {
+  api.delete('/tiendas/' + req.params.id, req.body).then(resp => {
     res.send(resp.data)
   })
 })

@@ -52,7 +52,7 @@ router.get('/statuses/:id', (req, res) => {
 
 // Crear un estado
 router.post('/statuses', (req, res) => {
-  api.post('/estados').then(resp => {
+  api.post('/estados', req.body).then(resp => {
     res.send(resp.data)
   })
 })
@@ -65,8 +65,8 @@ router.put('/statuses/:id', (req, res) => {
 })
 
 // Eliminar un estado
-router.put('/statuses/:id', (req, res) => {
-  api.put('/estados/delete/' + req.params.id, req.body).then(resp => {
+router.delete('/statuses/:id', (req, res) => {
+  api.delete('/estados/delete/' + req.params.id, req.body).then(resp => {
     res.send(resp.data)
   })
 })
