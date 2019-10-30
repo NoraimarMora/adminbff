@@ -21,6 +21,13 @@ router.get('/orders/:id', (req, res) => {
   })
 })
 
+// Crear una orden
+router.post('/orders', (req, res) => {
+  api.post('/ordenes', req.body).then(resp => {
+    res.send(resp.data)
+  })
+})
+
 // Actualizar una orden
 router.put('/orders/:id', (req, res) => {
   api.put('/ordenes/update/' + req.params.id, req.body).then(resp => {
